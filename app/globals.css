@@ -1,26 +1,151 @@
-@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.search-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+input{
+  height: 35px;
+  width: auto;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.main {
+  display: flex;
+  height: calc(100vh - 70px); /* 70px is header height */
+  overflow: hidden;
+}
+
+
+.left-menu {
+  width: 350px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-right: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+.left-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.employees {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  gap: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.employee-name {
+  width: 160px; /* control name area */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.employee-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.employee-buttons button {
+  padding: 6px 10px;
+  font-size: 14px;
+  height: auto;
+  width: 82px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: #4CAF50;
+}
+
+/* .delete{
+  background-color: red;
+  font-size: xx-large;
+} */
+
+.right-menu {
+  flex: 1;
+  background-color: #ffffff;
+
+  /* Center content safely */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Ensure it stays within main area */
+  overflow-y: auto;
+}
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.user-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-input-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-input-form input {
+  padding: 8px 12px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user-input-form button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.employee-details{
+  width: 350px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-right: 2px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
 }

@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react'
-import './globals.css';
+import '../globals.css'
 import { employees } from '@/components/Employees';
 
 interface employeeType {
