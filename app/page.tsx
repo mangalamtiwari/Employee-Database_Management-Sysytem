@@ -170,13 +170,14 @@ function Home() {
 
           {showForm &&
             <div className='user-input-form'>
-              <input type="text" placeholder="ID" value={newEmployee.id === 0 ? '' : newEmployee.id} onChange={(e) => handleChange(e)} />
-              <input type="text" placeholder="Name" value={newEmployee.name} onChange={(e) => handleChange(e)} />
-              <input type="text" placeholder="Age" value={newEmployee.age === 0 ? '' : newEmployee.age} onChange={(e) => handleChange(e)} />
-              <input type="text" placeholder="Address" value={newEmployee.address} onChange={(e) => handleChange(e)} />
-              <input type="text" placeholder="Email" value={newEmployee.email} onChange={(e) => handleChange(e)} />
-              <input type="text" placeholder="Mobile Number" value={newEmployee.mobile} onChange={(e) => handleChange(e)} />
-              <input type="text" placeholder="Date of Birth" value={newEmployee.dob} onChange={(e) => handleChange(e)} />
+              <input name="id" type="text" placeholder="ID" value={newEmployee.id === 0 ? '' : newEmployee.id} onChange={handleChange} />
+              <input name="name" type="text" placeholder="Name" value={newEmployee.name} onChange={handleChange} />
+              <input name="age" type="text" placeholder="Age" value={newEmployee.age === 0 ? '' : newEmployee.age} onChange={handleChange} />
+              <input name="address" type="text" placeholder="Address" value={newEmployee.address} onChange={handleChange} />
+              <input name="email" type="text" placeholder="Email" value={newEmployee.email} onChange={handleChange} />
+              <input name="mobile" type="text" placeholder="Mobile" value={newEmployee.mobile} onChange={handleChange} />
+              <input name="dob" type="text" placeholder="DOB" value={newEmployee.dob} onChange={handleChange} />
+
               <button onClick={handleSubmit}>Save</button>
             </div>
           }
